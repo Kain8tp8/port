@@ -1,0 +1,110 @@
+<div class="container-sm">
+  <h2 class="text-white my-4">Today-{{title}}</h2>
+  <hr class="divider bg-white" />
+  <figure class="text-center">
+    <blockquote class="blockquote">
+      <p class="text-white bg-dark">The memory warms you up inside, but it also
+        breaks your soul apart.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Never look back
+      <cite title="Source Title"> — Enjoy every moment </cite>
+    </figcaption>
+  </figure>
+  <img src="https://picsum.photos/500" class="rounded mx-auto d-block" alt="..." />
+  <br />
+  <p class="text-white bg-dark text-center">Lorem ipsum dolor sit amet
+    consectetur adipisicing elit. Explicabo velit assumenda voluptatum
+    dignissimos quae, veritatis praesentium vel eveniet unde mollitia dolores
+    sequi, laboriosam nisi enim quia inventore animi natus exercitationem! Lorem
+    ipsum dolor sit amet consectetur adipisicing elit. Hic error explicabo
+    nesciunt fugiat ad corrupti quos delectus minus nam nisi enim quo, a, magnam
+    adipisci necessitatibus voluptas assumenda itaque ut!
+  </p>
+
+  <br />
+  {{! long text }}
+  <p class="text-white bg-dark">Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Explicabo velit assumenda voluptatum dignissimos quae,
+    veritatis praesentium vel eveniet unde mollitia dolores sequi, laboriosam
+    nisi enim quia inventore animi natus exercitationem! Lorem ipsum dolor sit
+    amet consectetur adipisicing elit. Hic error explicabo nesciunt fugiat ad
+    corrupti quos delectus minus nam nisi enim quo, a, magnam adipisci
+    necessitatibus voluptas assumenda itaque ut!Lorem Lorem ipsum dolor sit amet
+    consectetur adipisicing elit. Nisi officiis blanditiis aliquam suscipit in
+    ex optio, expedita porro laborum! Doloribus explicabo ipsum fugit odit
+    earum. Quis laborum magni eos iste. Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Earum nesciunt necessitatibus doloribus aut ipsa
+    architecto ipsum numquam dolores et molestiae voluptate quos deserunt
+    eveniet, dicta ducimus totam eius corporis aspernatur? Lorem ipsum dolor
+    sit, amet consectetur adipisicing elit. Asperiores nesciunt rem ut est
+    maiores ad facilis quae cupiditate, beatae nam ullam modi numquam nihil
+    accusamus eligendi, natus saepe ducimus non nisi odit! Magni, consequatur?
+    Quasi, repudiandae quaerat. adipisicing elit. Explicabo velit assumenda
+    voluptatum dignissimos quae, veritatis praesentium vel eveniet unde mollitia
+    dolores sequi, laboriosam nisi enim quia inventore animi natus
+    exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+    error explicabo nesciunt fugiat ad corrupti quos delectus minus nam nisi
+    enim quo, a, magnam adipisci necessitatibus voluptas assumenda itaque
+    ut!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+    officiis blanditiis aliquam suscipit in ex optio, expedita porro laborum!
+    Doloribus explicabo ipsum fugit odit earum. Quis laborum magni eos iste.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nesciunt
+    necessitatibus doloribus aut ipsa architecto ipsum numquam dolores et
+    molestiae voluptate quos deserunt eveniet, dicta ducimus totam eius corporis
+    aspernatur? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    Asperiores nesciunt rem ut est maiores ad facilis quae cupiditate, beatae
+    nam ullam modi numquam nihil accusamus eligendi, natus saepe ducimus non
+    nisi odit! Magni, consequatur? Quasi, repudiandae quaerat.
+  </p>
+
+  <div class="grid gap-5">
+    <img height="250px" src="https://picsum.photos/500" class="card-img-top" alt="..." />
+    <img height="250px" src="https://picsum.photos/500" class="card-img-top" alt="..." />
+  </div>
+  <br />
+
+  <form action="/about" method="post" class="d-flex flex-column gap-3 text-secondary">
+    <div>
+      <label for="nikName" class="form-label">Nikname</label>
+      <input name="nikName" type="text" class="form-control" id="nikName" placeholder="Enter article title here..." />
+    </div>
+    <div>
+      <label for="text" class="form-label">Comments</label>
+      <textarea name="text" type="text" class="form-control" id="text" placeholder="Leave a comment here"
+        style="height: 100px"></textarea>
+    </div>
+
+    <button class="btn btn-outline-light" type="sumbit">Button</button>
+
+  </form>
+  <br />
+  <hr class="divider bg-white" />
+  <div class="gap-3">
+    {{#each comments}}
+    <div class="card">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        
+        <a href="#" class="link-dark fs-2 text-start text-capitalize"><img src="https://picsum.photos/50" class="rounded-circle" alt="..." />Dark
+          link
+          {{nikName}}</a>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+            class="bi bi-backspace-fill" viewBox="0 0 16 16">
+            <path
+              d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z">
+            </path>
+          </svg>
+     
+
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{text}}</p>
+        </blockquote>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+</div>

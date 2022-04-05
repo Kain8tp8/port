@@ -1,0 +1,24 @@
+<div class="container-sm">
+  <h2 class="text-white my-4">Today-{{title}}</h2>
+  <hr class="divider bg-white" />
+  <form action="/admin" method="post" class="d-flex flex-column gap-5 text-secondary">
+
+    <div>
+      <label for="title" class="form-label">Title</label>
+      <input name="title" type="text" class="form-control" id="title" placeholder="Enter article title here..." />
+    </div>
+
+    <div>
+      <label for="url" class="form-label">Image URL</label>
+      <input name="url" type="text" class="form-control" id="url" placeholder="Enter image url..." />
+    </div>
+
+    <div>
+      <label for="desc" class="form-label">Description</label>
+      <textarea name="desc" type="text" class="form-control" id="desc" placeholder="Enter desc..."></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit"><a href="/btn" class="link-light">Publish</a></button>
+
+  </form>
+</div>
